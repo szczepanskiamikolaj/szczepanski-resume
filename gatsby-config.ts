@@ -3,11 +3,12 @@
  */
 
 module.exports = {
+  pathPrefix: "/szczepanski-resume",
   siteMetadata: {
     title: `Szczepanski Resume`,
     description: `Resume`,
     author: `szczepanskiamikolaj`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://szczepanskiamikolaj.github.io/szczepanski-resume/`,
   },
   plugins: [
     `gatsby-plugin-image`,
