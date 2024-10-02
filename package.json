@@ -6,16 +6,33 @@
   "version": "0.1.0",
   "author": "Mikołaj Szczepański <szczepanskiamikolaj@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/material": "^6.0.2",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
+    "framer-motion": "^11.5.2",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-typescript-css-modules": "^1.0.4",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "i18next": "^23.15.1",
+    "json-to-graphql-query": "^2.2.5",
+    "material-ui-flags": "^1.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^15.0.2",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-world-flags": "^1.6.0",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@types/react-world-flags": "^1.4.5",
     "gh-pages": "^6.1.1",
     "prettier": "^2.8.8"
   },
@@ -32,7 +49,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "predeploy": "gatsby build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b gh-pages"
   },
   "repository": {
     "type": "git",
