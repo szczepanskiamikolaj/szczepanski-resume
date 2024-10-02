@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkszczepanski_resume=self.webpackChunkszczepanski_resume||[]).push([[453],{731:function(e,t,n){n.r(t);var u=n(6540),a=n(4794);t.default=()=>((0,u.useEffect)((()=>{(0,a.navigate)("/")}),[]),u.createElement("div",null,u.createElement("h1",null,"Page Not Found"),u.createElement("p",null,"Redirecting you to the homepage...")))}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-14228d778028d5c01fb9.js.map
