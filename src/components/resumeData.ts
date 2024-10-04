@@ -148,28 +148,21 @@ const resumeData: ResumeData = {
         label: "Education",
         educations: [
             {
-                degree: "Technik Informatyk",
+                degree: "Computer Science Technician",
                 date: "2020",
-                school: "Zespół Szkół Elektrycznych i Ogólnokrztałcących w Krośnie"
+                school: "Complex of General Education Schools in Krosno"
             },
             {
-                degree: "Inżynier Technologii Internetowych i Baz Danych",
+                degree: "Engineer of Internet Technologies and Databases ",
                 date: "2024",
-                school: "Państwowa Akademia Nauk Stosowanych w Krośnie",
+                school: "State University of Applied Sciences in Krosno",
             },
         ]},
     experience: {
         label: "Experience",
         experiences: [
         {
-            title: "Zniczplast",
-            date: "2018, 2019",
-            descriptions: [
-                { description: "Production Machine Operator" },
-            ]
-        },
-        {
-            title: "Wojewódzki Szpital Podkarpacki im. Jana Pawła II w Krośnie, Dział Informatyczny",
+            title: "Podkarpackie Voivodeship Hospital of John Paul II in Krosno",
             date: "2021",
             descriptions: [
                 { description: "Internship" },
@@ -278,14 +271,14 @@ const resumeDataPL: ExplicitUndefined<typeof resumeData> = {
         label: "Edukacja",
         educations: [
             {
-                degree: undefined,
+                degree: "Technik Informatyk",
                 date: undefined,
-                school: undefined
+                school: "Zespół Szkół Elektrycznych i Ogólnokrztałcących w Krośnie"
             },
             {
-                degree: undefined,
+                degree: "Inżynier Technologii Internetowych i Baz Danych",
                 date: undefined,
-                school: undefined,
+                school: "Państwowa Akademia Nauk Stosowanych w Krośnie ",
             },
         ]
     },
@@ -294,14 +287,7 @@ const resumeDataPL: ExplicitUndefined<typeof resumeData> = {
         experiences: 
         [
             {
-                title: undefined,
-                date: undefined,
-                descriptions: [ 
-                    {description: "Operator Maszyn"},
-                ]
-            },
-            {
-                title: undefined,
+                title: "Wojewódzki Szpital Podkarpacki im.Jana Pawła II w Krośnie",
                 date: undefined,
                 descriptions: [ 
                     {description: "Praktykant"},
