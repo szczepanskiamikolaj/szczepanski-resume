@@ -85,9 +85,9 @@ const Resume: React.FC<ResumeProps> = ({ language }) => {
             <Grid2 size={{ xs: 12, md: 5 }}>
               {/* Profile */}
               <Card variant="blackCard" sx={{height: '100%'}}>
-                <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", paddingX: 9 }}>
+                <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", px: 9 }}>
                   <GatsbyImage image={resumeImages.getAvatarImage()} alt={resumeData.name} style={{ borderRadius: "50%" }} />
-                  <Typography variant="h4" component="div" sx={{ mt: 2 }} noWrap>
+                  <Typography variant="h4" component="div" sx={{mt: 2,textAlign: "center", whiteSpace: { xs: "normal", md: "nowrap" },}}>
                     {t('name')}
                   </Typography>
                 </Box>
