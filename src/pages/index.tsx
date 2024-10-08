@@ -5,13 +5,18 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Flag from "react-world-flags";
 import { motion, AnimatePresence } from "framer-motion"; 
+import { graphql, useStaticQuery } from "gatsby";
 
-const IndexPage = () => {
+const flagStyles: React.CSSProperties = {
+  width: 24,
+};
+
+const IndexPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "pl">("en");
 
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "pl" ? "en" : "pl"));
-  };
+  const toggleLanguage = (): void => {
+    setLanguage((prevLanguage: "en" | "pl") => (prevLanguage === "pl" ? "en" : "pl"));
+  };  
 
   return (
     <Box display="flex" justifyContent="center" position="relative">
@@ -23,7 +28,7 @@ const IndexPage = () => {
           exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.2 }} 
         >
-          <Resume language={language} /> {/* Resume */}
+          <Resume language={language} /> {/* Resume component */}
         </motion.div>
       </AnimatePresence>
 
@@ -42,13 +47,17 @@ const IndexPage = () => {
             height: "80px",
             boxShadow: 3,
             backgroundColor: 'white', 
+            transition: "background 0.3s ease", 
+            "&:hover": {
+              background: "#e1e1e1"
+            },
           }}
           onClick={toggleLanguage}
         >
           {language === "pl" ? (
-            <Flag code="USA" style={{ width: 24, height: 24 }} />
+            <Flag code="USA" style={flagStyles} />
           ) : (
-            <Flag code="POL" style={{ width: 24, height: 24 }} />
+            <Flag code="POL" style={flagStyles} />
           )}
         </IconButton>
       </Box>
@@ -56,6 +65,24 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => {};
+export const Head: React.FC = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+        }
+      }
+    }
+  `);
+
+  return (
+    <>
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
+    </>
+  );
+};
 
 export default IndexPage;
