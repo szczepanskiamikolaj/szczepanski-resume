@@ -35,6 +35,7 @@ interface ResumeData {
         icons: { 
             icon: React.ComponentType;
             url: string;
+            label: string;
         }[]
     };
     hobbies: {
@@ -145,8 +146,8 @@ const resumeData: ResumeData = {
     websites: {
         label: "Websites",
         icons: [
-            { icon: GithubIcon, url: "https://github.com/szczepanskiamikolaj" },
-            { icon: LinkedInIcon, url: "www.linkedin.com/in/mikołaj-szczepański-4810a1233" },
+            { icon: GithubIcon, url: "https://github.com/szczepanskiamikolaj" , label: "GitHub"},
+            { icon: LinkedInIcon, url: "https://linkedin.com/in/mikołaj-szczepański-4810a1233", label: "LinkedIn" },
      ]
     },
     education: {
@@ -274,8 +275,8 @@ const resumeDataPL: ExplicitUndefined<typeof resumeData> = {
     websites: {
         label: "Strony",
         icons: [
-            { icon: undefined, url: undefined },
-            { icon: undefined, url: undefined },
+            { icon: undefined, url: undefined, label: undefined },
+            { icon: undefined, url: undefined, label: undefined },
      ]
     },
     education: {

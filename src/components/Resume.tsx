@@ -2,7 +2,7 @@ import React, { Ref, useEffect, useState } from "react";
 import { Project, resumeData } from "./resumeData";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import resumeTheme from "./resumeTheme";
-import { Box, CssBaseline, Divider, Grid2, IconButton, List, ListItem, ListItemIcon, ListItemText, Typography, Card, CardActions } from "@mui/material";
+import { Box, CssBaseline, Divider, Grid2, IconButton, List, ListItem, ListItemIcon, ListItemText, Typography, Card, CardActions, Link } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Carousel from "react-material-ui-carousel";
@@ -206,14 +206,23 @@ const Resume: React.FC<ResumeProps> = ({ language }) => {
                 )}
 
 
-                  {/* Websites */}
-                  {!isPrinting && <CardActions sx={{ justifyContent: 'center', mt: 'auto' }}>  
-                      {resumeData.websites.icons.map((site, index) => (
-                          <IconButton href={site.url} color="primary" sx={{ color: 'white' }} key={index}>
-                              <site.icon />
-                          </IconButton>
-                      ))}
-                  </CardActions>}
+                {/* Websites */}
+                {!isPrinting && (
+                  <CardActions sx={{ justifyContent: 'center', mt: 'auto' }}>  
+                    {resumeData.websites.icons.map((site, index) => (
+                      <Box key={index} display={"flex"} sx={{ textAlign: 'center', mx: 4, flexDirection: 'column' }}>
+                        <IconButton href={site.url} color="primary" sx={{ color: 'white' }}>
+                          <site.icon />
+                        </IconButton>
+                        <Link variant="caption" sx={{ color: 'white'}}  href={site.url}>
+                          {t('websites.icons.' + index + '.label')}
+                        </Link>
+                      </Box>
+                    ))}
+                  </CardActions>
+                )}
+
+
                 </Card>
               </Grid2>
 
