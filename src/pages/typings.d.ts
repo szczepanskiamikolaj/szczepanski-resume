@@ -12,5 +12,9 @@ declare module '@mui/material/Paper' {
     whiteCard: true; 
   }
 }
-
+declare global {
+  interface Window {
+    printPage: () => void;
+  }
+}
 

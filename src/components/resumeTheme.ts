@@ -20,6 +20,7 @@ const theme = createTheme({
                         color: 'white', 
                         padding: '16px',
                         marginBottom: '16px',
+                        borderRadius: '0',
                     },
                 },
             ],

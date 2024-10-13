@@ -47,7 +47,7 @@ const IndexPage: React.FC = () => {
             height: "80px",
             boxShadow: 3,
             backgroundColor: 'white', 
-            transition: "background 0.3s ease", 
+            transition: "background 1.7s ease", 
             "&:hover": {
               background: "#e1e1e1"
             },

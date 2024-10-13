@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^15.0.2",
     "react-material-ui-carousel": "^3.4.2",
+    "react-to-pdf": "^1.0.1",
     "react-world-flags": "^1.6.0",
     "typescript": "^5.5.4"
   },

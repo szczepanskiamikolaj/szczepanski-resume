@@ -22,7 +22,7 @@ interface ResumeData {
         value: string;
     }[];
     skills: {
-        description: string;
+        label: string;
         languages: {
             language: string,
             technologies?: {
@@ -37,6 +37,14 @@ interface ResumeData {
             url: string;
         }[]
     };
+    hobbies: {
+        label: string
+        hobbies: { hobby: string; }[]
+    },
+    spokenLanguages: {
+        label: string
+        languages: { language: string; }[] 
+    }
     education: {
         label: string;
         educations: {
@@ -58,9 +66,6 @@ interface ResumeData {
         label: string;
         projects: Project[]
     };
-    speakingLanguages: {
-        speakingLanguage: string
-    }[]
 
     readonly address: string;
 }
@@ -101,7 +106,7 @@ const resumeData: ResumeData = {
         { icon: HomeIcon, label: "Address", value: "Korczyna 38-420, Dolińska 52" }
     ],
     skills: {
-        description: "Languages and Technologies",
+        label: "Languages and Technologies",
         languages: [
             {
                 language: "Java",
@@ -210,8 +215,14 @@ const resumeData: ResumeData = {
             previewImage: "https://i.imgur.com/IjCd4vi.png"
         },
     ],},
-    speakingLanguages: [{ speakingLanguage: "Polish" }, { speakingLanguage: "English" }],
-
+    spokenLanguages: {
+        label: "Spoken Languages",
+        languages:[{ language: "Polish" }, { language: "English" }],
+    },
+    hobbies: {
+        label: "Hobbies",
+        hobbies:[{ hobby: "Playing Guitar" }, { hobby: "2D Illustration" }],
+    },
     get address(): string {
         const addressContact = this.contacts.find(contact => contact.label === "Address");
         return addressContact ? addressContact.value : "No Adress";
@@ -227,7 +238,7 @@ const resumeDataPL: ExplicitUndefined<typeof resumeData> = {
         { icon: HomeIcon, label: "Adres", value: "Korczyna 38-420, Dolińska 52" }
     ],
     skills: {
-        description: "Języki i Technologie",
+        label: "Technologie informatyczne",
         languages: [
             {
                 language: undefined,
@@ -336,7 +347,14 @@ const resumeDataPL: ExplicitUndefined<typeof resumeData> = {
             },
         ],
     },
-    speakingLanguages: [{speakingLanguage: "Polski"},{speakingLanguage: "Angielski"}],
+    spokenLanguages: {
+        label: "Języki",
+        languages:[{ language: "Polski" }, { language: "Angielski" }],
+    },
+    hobbies: {
+        label: "Hobby i Zainteresowania",
+        hobbies:[{ hobby: "Granie na gitarze" }, { hobby: "Ilustracja" }],
+    },
 
     get address(): string {
         const addressContact = this.contacts?.find(contact => contact?.label === "Adres")
