@@ -154,7 +154,7 @@ const resumeData: ResumeData = {
         label: "Education",
         educations: [
             {
-                degree: "Computer Science Technician",
+                degree: "IT Technician",
                 date: "2020",
                 school: "Complex of General Education Schools in Krosno"
             },
